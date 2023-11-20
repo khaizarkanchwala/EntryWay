@@ -1,7 +1,7 @@
 const cron=require('cron')
 const https=require('https')
 
-const backend='https://EntryWay.onrender.com/api'
+const backend='https://entryway.onrender.com/api'
 const jobs=new cron.CronJob('*/14 * * * *',function(){
     console.log(`Restarting server`);
 
