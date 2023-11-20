@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+</head>
+<body>
+  <% if(success !=""){ %>
+  <div class="alert alert-success">
+    <strong>Success!</strong><%= success %>
+  </div>
+  <% } %>
+  <h1 style="color:rgb(51, 0, 255)"><%= title %></h1>
+  <table id="example" class="table table-striped table-bordered" style="width:100%">
+      <thead>
+          <tr>
+              <th>Ticket booked by</th>
+              <th>Place visited</th>
+              <th>Admin ID</th>
+              <th>Adults</th>
+              <th>Children</th>
+              <th>Foreigner</th>
+              <th>Amount paid</th>
+              <th>Booked on</th>
+              <th>Valid For</th>
+              <th>Visited</th>
+          </tr>
+      </thead>
+      <%if(visitdata.length>0){%>
+        <% visitdata.forEach(function(row){%>
+      <tbody>
+          <tr>
+              <td><%=row.ticket_bookedbyname%></td>
+              <td><%=row.ticket_ofname%></td>
+              <td><%=row.adminID%></td>
+              <td><%=row.adult%></td>
+              <td><%=row.children%></td>
+              <td><%=row.foreigner%></td>
+              <td><%=row.Totalpaid%></td>
+              <td><%=row.booked_on%></td>
+              <td><%=row.valid_for%></td>
+              <td><a class="btn btn-primary btn-xs" href="/visited/<%= row._id %>"><i class="fa fa-edit"></i></a>
+            </td>
+              
+          </tr>
+      </tbody>
+      <%})}else{%>
+        <tr>
+        <td colspan="10">RESULT NOT FOUND</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr> 
+        <%}%>  
+  </table>
+
+  <script src="//code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+  <script src="//cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#example').DataTable();
+  });
+  </script>
+</body>
+</html>

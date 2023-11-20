@@ -1,0 +1,134 @@
+body{
+    background: linear-gradient(135deg, #e4e7eb, #B58DED);
+    height: 300vh;
+    width: 100%; 
+    text-align: center;
+}
+
+h4{
+    font-family: 'Segoe UI', bold;
+    font-size: 35px;
+    color: #1B8AF1 ;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+h3{
+    font-family: 'Segoe UI', bold;
+    font-size: 28px;
+    color:#B58DED ;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+h2{
+    font-family: 'Segoe UI', bold;
+    font-size: 20px;
+    color:#1B8AF1  ;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+li{
+    font-family: 'Segoe UI', bold;
+    font-size: 20px;
+    color:#1B8AF1 ;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+img{
+    width:100% ;
+}
+
+.img1{
+    width:20% ;
+}
+
+form{
+    display: inline-block;
+    align-items: center;
+    height: 700px;
+    width: 350px;
+    margin-bottom: 170px;
+}
+.form1{
+    display: inline-block;
+    align-items: center;
+    height: 200px;
+    width: 350px;
+    margin-bottom: 170px;
+}
+.form2{
+    display: inline-block;
+    align-items: center;
+    height: 1000px;
+    width: 350px;
+    margin-bottom: 170px;
+}
+.text_area{
+    align-content: center;
+    border-radius: 22px;
+    margin-bottom: 35px;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.text_input{
+    margin-top: 1.2rem;
+    font-family: 'Montserrat regular';
+    font-size: 20px;
+    border: none;
+    width: 80%;
+}
+
+.btn{
+    margin-top: 15px;
+    width: 165px;
+    height: 50px;
+    border-radius: 30px;
+    background: #B58DED;
+    border: none;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(181, 141, 237, 0.7), 0 6px 20px 0 rgba(181, 141, 237, 0.9);
+    cursor: pointer;
+}
+
+.login{
+    display: inline-block;
+    background: #FFFFFF;
+    width: 500px;
+    height: 880px;
+    margin-top: 10%;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login1{
+    display: inline-block;
+    background: #FFFFFF;
+    width: 500px;
+    height: 700px;
+    margin-top: 10%;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login2{
+    display: inline-block;
+    background: #FFFFFF;
+    width: 500px;
+    height: 1850px;
+    margin-top: 10%;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.link{
+    color: #B58DED;
+    font-family: 'Montserrat light';
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}

@@ -1,0 +1,29 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+table{
+    width: 100%;
+}
+table th,
+table td{
+    font-family: 'Segoe UI', bold;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    padding:4px 8px;
+    text-align: left;
+}
+button{
+    padding: 2px 4px;
+    font-size: 12px;
+    margin-right: 2px;
+}
+
+h3{
+    font-family: 'Segoe UI', bold;
+    font-size: 28px;
+    color:#B58DED ;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}

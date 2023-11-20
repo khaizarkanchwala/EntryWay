@@ -1,0 +1,186 @@
+.hero{
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.hero::before{
+    content: '';
+    background: url('https://static.vecteezy.com/system/resources/previews/000/412/025/original/vector-illustration-of-indian-landmarks.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+.hero .content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 1rem;
+}
+.hero h1{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+}
+
+
+.hero1{
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.hero1::before{
+    content: '';
+    background: url('https://image.freepik.com/free-vector/illustration-of-world-famous-landmarks_53876-8846.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+.hero1 .content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 1rem;
+}
+.hero1 h1{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+}
+
+
+.hero2{
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.hero2::before{
+    content: '';
+    background: url('https://i.pinimg.com/736x/98/77/f6/9877f664fb3dc01610f6de948c46feb2.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+.hero2 .content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 1rem;
+}
+.hero2 h1{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+}
+
+.hero3{
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.hero3::before{
+    content: '';
+    background: url('https://static.vecteezy.com/system/resources/previews/000/128/912/original/india-gate-vector-illustration.png') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+.hero3 .content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 1rem;
+}
+.hero3 h1{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+}
+
+.hero .search-text{
+    margin: 1.5rem;
+    font-size: 1.4rem;
+}
+.search-text{
+    color:#1B8AF1 ;
+    margin: 1.5rem;
+    font-size: 1.4rem;
+}
+.search{
+    display: flex;
+    height: 5px;
+    background-color: #fff;
+    color: #333;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 8px;
+}
+.search input[type=text]{
+    border: transparent;
+    background-color: #fff;
+    /* align-items: center; */
+    height: 50px;
+    width: 350px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+.search input[type=text]:focus{
+    outline: none;
+}
+
+.search .radio{
+    display: flex;
+    align-items: center;
+}
+.search button{
+    background-image: linear-gradient(45deg,#B58DED 0%,#1B8AF1 100%);
+    border: 1px solid #1B8AF1 ;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
