@@ -11,7 +11,7 @@ const Generateqr=()=> {
     // const navigate=useNavigate();
     const Getdata=async()=>{
         // console.log(`${_id}`)
-        setUrl(`http://localhost:3001/api/generateqr/${_id}`)
+        setUrl(`https://entryway.onrender.com/api/generateqr/${_id}`)
         if(!url){
             return alert("Error")
         }
