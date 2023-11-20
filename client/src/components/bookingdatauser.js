@@ -7,7 +7,7 @@ const AdminHome=()=> {
     const showdata = async () => {
         // e.preventDefault()
         try {
-            const res = await fetch('/bookingdata', {
+            const res = await fetch('/api/bookingdata', {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

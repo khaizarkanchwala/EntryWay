@@ -6,7 +6,7 @@ const About=()=> {
     const [userData,setUserData]=useState({})
     const callAboutPage=async()=>{
         try{
-            const res= await fetch('/about',{
+            const res= await fetch('/api/about',{
                 method:"GET",
                 headers:{
                     Accept:"application/json",

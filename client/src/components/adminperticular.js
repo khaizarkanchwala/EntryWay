@@ -11,7 +11,7 @@ const AdminHome=()=> {
     const [site, setTourist] = useState([])
     const userHome=async()=>{
         try{
-            const res= await fetch('/getdata',{
+            const res= await fetch('/api/getdata',{
                 method:"GET",
                 headers:{
                     "Content-Type":"application/json"
@@ -35,7 +35,7 @@ const AdminHome=()=> {
 
     const showSites = async (e) => {
         try {
-            const res = await fetch(`/read/${userId}`, {
+            const res = await fetch(`/api/read/${userId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -55,7 +55,7 @@ const AdminHome=()=> {
 
     const Delete = async (id) => {
         try {
-            const res = await fetch(`/delete/${id}`, {
+            const res = await fetch(`/api/delete/${id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"

@@ -14,7 +14,7 @@ router.use(cors())
 router.use(cookieparser())
 // var now = new Date();
 
-router.get('/generateqr/:id/',(req,res)=>{
+router.get('/api/generateqr/:id/',(req,res)=>{
     const id=req.params.id
     var datavisit=bookingModel.find({ticket_bookedby:id})
     datavisit.exec(function(err,data){
@@ -23,7 +23,7 @@ router.get('/generateqr/:id/',(req,res)=>{
     })
 })
 
-router.get('/visited/:id',async(req,res)=>{
+router.get('/api/visited/:id',async(req,res)=>{
     const id=req.params.id
     var data=await bookingModel.findById(id)
     // console.log(data)
@@ -50,7 +50,7 @@ router.get('/visited/:id',async(req,res)=>{
         })
     })
 
-    router.post('/qrdata',authenticate,async(req,res)=>{
+    router.post('/api/qrdata',authenticate,async(req,res)=>{
         const bought_by=req.body.bought_by
         const siteid=req.body.siteid
         const qrid=req.body.qrid
@@ -92,11 +92,8 @@ router.get('/visited/:id',async(req,res)=>{
     }
 })
 
-router.get('/',(req,res)=>{
-    res.send('hello from router')
-})
 
-router.post('/register',async(req,res)=>{
+router.post('/api/register',async(req,res)=>{
     const name=req.body.name
     const email=req.body.email
     const phone=req.body.phone
@@ -128,7 +125,7 @@ router.post('/register',async(req,res)=>{
     }
 
 })
-router.post('/addsite',async(req,res)=>{
+router.post('/api/addsite',async(req,res)=>{
 
     const name=req.body.name
     const _id=req.body._id
@@ -203,7 +200,7 @@ router.post('/addsite',async(req,res)=>{
     }
 })
 
-router.post('/booking',authenticate,async(req,res)=>{
+router.post('/api/booking',authenticate,async(req,res)=>{
         const data=req.rootUser
         const ticket_of=req.body.ticket_of
         const adminID=req.body.adminID
@@ -247,7 +244,7 @@ router.post('/booking',authenticate,async(req,res)=>{
     }
 })
 
-router.post('/signin',async(req,res)=>{
+router.post('/api/signin',async(req,res)=>{
     try{
         let token
         const email=req.body.email
@@ -280,15 +277,15 @@ router.post('/signin',async(req,res)=>{
     }
 })
 
-router.get('/about',authenticate,(req,res)=>{
+router.get('/api/about',authenticate,(req,res)=>{
     res.send(req.rootUser)
 })
 
-router.get('/getdata',authenticate,(req,res)=>{
+router.get('/api/getdata',authenticate,(req,res)=>{
     res.send(req.rootUser)
 })
 
-router.get('/getdataofsite/:id',authenticate,(req,res)=>{
+router.get('/api/getdataofsite/:id',authenticate,(req,res)=>{
     var id=req.params.id
     touristModel.findOne({_id:id},(err,data)=>{
         if(err){
@@ -300,7 +297,7 @@ router.get('/getdataofsite/:id',authenticate,(req,res)=>{
     })
 })
 
-router.get('/read/:id',(req,res)=>{
+router.get('/api/read/:id',(req,res)=>{
     var id=req.params.id
      touristModel.find({Adminid:id},(err,data)=>{
         if(err){
@@ -312,7 +309,7 @@ router.get('/read/:id',(req,res)=>{
     })
 })
 
-router.get('/bookingdataadmin/:id',(req,res)=>{
+router.get('/api/bookingdataadmin/:id',(req,res)=>{
     var id=req.params.id
      qrmModel.find({adminID:id},(err,data)=>{
         if(err){
@@ -324,7 +321,7 @@ router.get('/bookingdataadmin/:id',(req,res)=>{
     })
 })
 
-router.get('/bookingdata',authenticate,(req,res)=>{
+router.get('/api/bookingdata',authenticate,(req,res)=>{
     var data=req.rootUser
     bookingModel.find({ticket_bookedby:data._id},(err,data)=>{
         if(err){
@@ -336,7 +333,7 @@ router.get('/bookingdata',authenticate,(req,res)=>{
     })
 })
 
-router.get('/readdata',(req,res)=>{
+router.get('/api/readdata',(req,res)=>{
      touristModel.find({},(err,data)=>{
         if(err){
             res.send(err)
@@ -347,7 +344,7 @@ router.get('/readdata',(req,res)=>{
     })
 })
 
-router.put('/update',async(req,res)=>{
+router.put('/api/update',async(req,res)=>{
     const id=req.body.id
     const name=req.body.name
     const _id=req.body._id
@@ -421,14 +418,14 @@ router.put('/update',async(req,res)=>{
     }
 })
 
-router.delete("/delete/:id",async(req,res)=>{
+router.delete("/api/delete/:id",async(req,res)=>{
     var id=req.params.id
 
     await touristModel.findByIdAndDelete(id).exec()
     res.send('deleted')
 })
 
-router.get('/moreinfo/:id',(req,res)=>{
+router.get('/api/moreinfo/:id',(req,res)=>{
 
     var id=req.params.id
     touristModel.findOne({_id:id},(err,data)=>{
@@ -441,7 +438,7 @@ router.get('/moreinfo/:id',(req,res)=>{
     })
 })
 
-router.get('/getupdate/:id',authenticate,(req,res)=>{
+router.get('/api/getupdate/:id',authenticate,(req,res)=>{
 
     var id=req.params.id
     touristModel.findOne({_id:id},(err,data)=>{
@@ -455,7 +452,7 @@ router.get('/getupdate/:id',authenticate,(req,res)=>{
 })
 
 
-router.post('/contact',authenticate,async(req,res)=>{
+router.post('/api/contact',authenticate,async(req,res)=>{
     try{
     const name=req.body.name
     const email=req.body.email
@@ -476,7 +473,7 @@ router.post('/contact',authenticate,async(req,res)=>{
     }
 })
 
-router.post('/search',(req, res) => {
+router.post('/api/search',(req, res) => {
     const fltrname = req.body.sitename;  
      touristModel.find({siteName: fltrname.toUpperCase()},(err,data)=>{
         if(err){
@@ -488,7 +485,7 @@ router.post('/search',(req, res) => {
     })
   })
 
-router.get('/logout',(req,res)=>{
+router.get('/api/logout',(req,res)=>{
     res.clearCookie('jwtoken',{path:"/"})
     res.status(200).send('userlogout')
 })

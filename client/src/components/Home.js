@@ -12,7 +12,7 @@ const Home = () => {
     const[name,setSearch]=useState("");
     const userHome = async () => {
         try {
-            const res = await fetch('/readdata', {
+            const res = await fetch('/api/readdata', {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -37,7 +37,7 @@ const Home = () => {
             window.alert("Enter data to search")
         }
         else{
-        const res= await fetch("/search",{
+        const res= await fetch("/api/search",{
             method:"POST",
             headers:{
               "Content-Type":"application/json"

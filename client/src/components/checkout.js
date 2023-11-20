@@ -17,7 +17,7 @@ const Checkout = () => {
   const [show, setShow] = useState(false)
   const userHome = async () => {
     try {
-      const res = await fetch(`/getdataofsite/${_id}`, {
+      const res = await fetch(`/api/getdataofsite/${_id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json"
@@ -45,7 +45,7 @@ const Checkout = () => {
     // console.log((adult*siteticket.adult)+" "+(child*siteticket.children)+" "+(foreigner*siteticket.foreigner));  
     // setTotal((adult*siteticket.adult)+(child*siteticket.children)+(foreigner*siteticket.foreigner))
     e.preventDefault();
-    const res = await fetch("/booking", {
+    const res = await fetch("/api/booking", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

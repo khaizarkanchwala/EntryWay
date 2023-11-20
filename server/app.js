@@ -1,6 +1,8 @@
 const express=require('express')
 const dotenv =require("dotenv")
+const jobs=require('./cron')
 
+jobs.start();
 const app=express()
 
 
@@ -13,7 +15,15 @@ const userModel=require('./model/userSchema')
 app.use(require('./router/auth'))
 const PORT=process.env.PORT
 
-
+app.get('/api',async(req,res)=>{
+    console.log('server running to restart')
+    try {
+      res.status(200).send('Server restart successful');
+    } catch (error) {
+      console.error('Error during server restart:', error);
+      res.status(500).send('Server restart failed');
+    }
+})
 // app.get('/about',(req,res)=>{
 //     res.send('hello about')
 // })

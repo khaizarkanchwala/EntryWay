@@ -9,7 +9,7 @@ const Navbar = () => {
   const [userName, setUserName] = useState('')
   const userHome = async () => {
     try {
-      const res = await fetch('/getdata', {
+      const res = await fetch('/api/getdata', {
         method: "GET",
         headers: {
           "Content-Type": "application/json"

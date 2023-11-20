@@ -11,14 +11,14 @@ const Generateqr=()=> {
     // const navigate=useNavigate();
     const Getdata=async()=>{
         // console.log(`${_id}`)
-        setUrl(`http://localhost:3001/generateqr/${_id}`)
+        setUrl(`http://localhost:3001/api/generateqr/${_id}`)
         if(!url){
             return alert("Error")
         }
         const response=await QRcode.toDataURL(url);
         setQrimageURL(response)
         if(qrimage!==""){
-        const res= await fetch("/qrdata",{
+        const res= await fetch("/api/qrdata",{
             method:"POST",
             headers:{
               "Content-Type":"application/json"

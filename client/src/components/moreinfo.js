@@ -11,7 +11,7 @@ const MoreInfo=()=> {
     const[sitetime,setTime]=useState({})
     const moreInfo = async (e) => {
         try {
-            const res = await fetch(`/moreinfo/${_id}`, {
+            const res = await fetch(`/api/moreinfo/${_id}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

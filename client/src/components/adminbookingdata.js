@@ -11,7 +11,7 @@ const Adminbookings=()=> {
     const [booking, setBookings] = useState([])
     const userHome=async()=>{
         try{
-            const res= await fetch('/getdata',{
+            const res= await fetch('/api/getdata',{
                 method:"GET",
                 headers:{
                     "Content-Type":"application/json"
@@ -35,7 +35,7 @@ const Adminbookings=()=> {
 
     const showSites = async (e) => {
         try {
-            const res = await fetch(`/bookingdataadmin/${userId}`, {
+            const res = await fetch(`/api/bookingdataadmin/${userId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

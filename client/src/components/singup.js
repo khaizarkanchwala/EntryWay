@@ -18,7 +18,7 @@ function Signup() {
       const[role,setRole]=useState("");
       const Postdata=async(e)=>{
         e.preventDefault();
-         const res= await fetch("/register",{
+         const res= await fetch("/api/register",{
           method:"POST",
           headers:{
             "Content-Type":"application/json"

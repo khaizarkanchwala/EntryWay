@@ -52,7 +52,7 @@ const Addmonument = () => {
     const[image,setImage]=useState("")
     const Postdata=async(e)=>{
         e.preventDefault();
-         const res= await fetch("/addsite",{
+         const res= await fetch("/api/addsite",{
           method:"POST",
           headers:{
             "Content-Type":"application/json"
@@ -72,7 +72,7 @@ const Addmonument = () => {
 
       const callAboutPage=async()=>{
         try{
-            const res= await fetch('/getdata',{
+            const res= await fetch('/api/getdata',{
                 method:"GET",
                 headers:{
                     Accept:"application/json",

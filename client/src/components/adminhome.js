@@ -9,7 +9,7 @@ const AdminHome=()=> {
     const [site, setTourist] = useState([])
     const userHome=async()=>{
         try{
-            const res= await fetch('/getdata',{
+            const res= await fetch('/api/getdata',{
                 method:"GET",
                 headers:{
                     "Content-Type":"application/json"
@@ -32,7 +32,7 @@ const AdminHome=()=> {
 
     const showSites = async (e) => {
         try {
-            const res = await fetch('/readdata', {
+            const res = await fetch('/api/readdata', {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -63,7 +63,7 @@ const AdminHome=()=> {
             <h1>{ show ? 'Welcome admin ':'Please login to get started'}</h1>
             </div>
             </div>
-            <button className='btn' onClick={showSites}>show sites</button>
+            {/* <button className='btn' onClick={showSites}>show sites</button> */}
             <table>
                 <thead>
                     <tr>
