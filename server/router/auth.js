@@ -482,9 +482,9 @@ router.post('/api/search',(req, res) => {
     })
   })
 
-router.get('/api/logout',(req,res)=>{
-    res.clearCookie('jwtoken')
-    res.status(200).send('userlogout')
-})
+router.post('/api/logout', (req, res) => {
+    res.clearCookie('jwtoken');
+    res.status(200).json({ message: 'Logout successful' });
+  });
 
 module.exports=router
