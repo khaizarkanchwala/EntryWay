@@ -256,12 +256,7 @@ router.post('/api/signin',async(req,res)=>{
         if(userLogin){
             const isMatch=await bcrypt.compare(password,userLogin.password)
            token= await userLogin.generateAuthToken()
-            res.cookie("jwtoken",token,{
-                expires:new Date(Date.now()+25892000000),
-                httpOnly:true,
-                path: "/api"
-
-            })
+            res.cookie("jwtoken",token,{httpOnly:true})
             if(!isMatch){
                 res.status(400).json({error:"invalid credential"})
             }
@@ -488,7 +483,7 @@ router.post('/api/search',(req, res) => {
   })
 
 router.get('/api/logout',(req,res)=>{
-    res.clearCookie('jwtoken',{path:"/api"})
+    res.clearCookie('jwtoken')
     res.status(200).send('userlogout')
 })
 
